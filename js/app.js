@@ -52,14 +52,10 @@ Complete the exercise in the space below:
 */
 
 const isCharAVowel = (letter) => {
-    if(letter = 'a' , 'e' , 'i' , 'o' , 'u') {
-        return('true')
-    } else {
-        return('false')
-    }
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    return vowels.includes(letter);
+    };
     
-}
-
 console.log('Exercise 3 Result:', isCharAVowel('a'));
 
 /*
@@ -110,9 +106,9 @@ Complete the exercise in the space below:
 */
 
 const maxOfThree = (a,b,c) => {
-    if(a >= b || a >= c) {
+    if(a >= b && a >= c) {
         return a;
-    } else if (b >= a || b >= c) {
+    } else if (b >= a && b >= c) {
         return b;
     } else {
         return c;
@@ -156,7 +152,7 @@ Complete the exercise in the space below:
 const convertTemperature = (temperature , scale) => {
     if(scale === 'C') {
         return(temperature*(9/5)) + 32;
-    } else (scale === 'F') 
+    } else if(scale === 'F') 
         return(temperature - 32) * (5/9);
 }
 
@@ -185,7 +181,7 @@ const basicCalculator = (firstNumber, secondNumber, arithmetic) => {
         return(firstNumber - secondNumber)
     } else if (arithmetic === 'multiply') {
         return(firstNumber * secondNumber)
-    } else (arithmetic === 'divide') 
+    } else if(arithmetic === 'divide') 
         return(firstNumber / secondNumber)
 }
 
